@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #ee62d7;
+            overflow: hidden;
+        }
+
+        li.nav-item {
+            float: left;
+        }
+
+        li.nav-item a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li.nav-item a:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #ee62d7;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 2000px;
+            position: absolute;
+        }
+
+        .text-box {
+            border: 1px solid #ee62d7;
+            padding: 10px;
+            width: 300px;
+            text-align: center;
+            margin-right: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h2 {
+            color: #f80cc5;
+        }
+
+        form {
+            width: 100%;
+            max-width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #f0078f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #a04582;
+        }
+
+        input[type="submit"]:focus {
+            outline: none;
+        }
+
+        .round-image {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            border: 1px solid #ee62d7;
+            margin-right: 300px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        #div-box {
+            display: flex;
+            justify-content: center;
+
+        }
+        
+        #botao{
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<ul class="navbar">
+    <li class="nav-item"><a href="#">Sobre</a></li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+
+<body>
+    <div id="div-box">
+        <img class="round-image" src="barbie1.jpg" alt="Imagem Redonda">
+        <h1>Barbie</h1>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+
+        <div class="text-box">
+            <h5>Foi Ruth Handler, esposa de Elliot Handler [fundador da empresa norte-americana Mattel] quem teve a
+                idéia de fabricar uma boneca adulta, que até então só existia em papel [na verdade, a boneca alemã
+                Lili,
+                feita de celulóide, é anterior à Barbie e pode ter inspirado Ruth Handler]. Mãe de três filhos, Ken,
+                Skipper e Barbara, ela não teve dúvida quanto ao nome da nova boneca: Barbie, o diminutivo de
+                Barbara. Mais tarde, Ken viria ser seu namorado e Skipper sua irmã-boneca.
+                Encomendada ao designer Jack Ryan, em 1958, ela foi lançada oficialmente na Feira Anual de
+                Brinquedos de
+                Nova York, em 9 de março de 1959. Barbie foi apresentada como uma modelo teenager vestida na última
+                moda. Aliás, a imagem da boneca sempre foi a de uma top model, símbolo de sucesso, beleza e
+                juventude.
+                Loura e vestida com um maiô listrado em preto e branco, a boneca nasceu com o corpo de manequim,
+                longas
+                pernas e cintura fina, as medidas perfeitas para os seus 29 cm de altura.</h5>
+        </div>
+
+        <form id="myForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="exampleInputPassword1">Senha:</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+    
+            <center><input id="botao" type="submit" value="OK"></center>
+    </div>
+
+    <script>
+
+        function verificarFormulario() {
+            var nome = document.getElementById("nome").value;
+            var telefone = document.getElementById("telefone").value;
+            var email = document.getElementById("email").value;
+
+            if (nome && telefone && email) {
+                alert("Formulário enviado com sucesso!");
+            } else {
+                alert("Por favor, preciso que você preencha todos os campos abaixo!");
+            }
+        }
+
+
+        var form = document.getElementById("myForm");
+        form.onsubmit = function (event) {
+            event.preventDefault();
+            verificarFormulario();
+        };
+    </script>
+
+    <footer>
+        <br>
+        <br>
+    </footer>
+
+</body>
+
+</html>
